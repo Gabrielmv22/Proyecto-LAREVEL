@@ -13,7 +13,8 @@ class Categoria extends Model
         
     }
     public function caracteristica()  {
-        return $this->belongsToMany(Caracteristica::class);
+        return $this->belongsTo(Caracteristica::class);
         
     }
+    protected $fillable =["caracteristica_id"];
 }

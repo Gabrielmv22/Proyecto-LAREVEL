@@ -8,6 +8,10 @@ Route::get('/', function () {
 
 Route::view('/panel','panel.index')->name('panel');
 
+Route::resource('presentaciones', App\Http\Controllers\PresentacioneController::class);
+Route::resource('categorias', App\Http\Controllers\CategoriaController::class);
+Route::resource('marcas', App\Http\Controllers\MarcaController::class);
+
 Route::get('/login', function () {
     return view('auth.login');
 });
